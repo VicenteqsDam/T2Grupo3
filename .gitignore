@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 /target/
 /bin/
 /.settings/
 /.classpath
 /.project
 /.springBeans
+=======
+/bin/
+/target/
+/.settings/
+/.project
+/.classpath
+>>>>>>> branch 'master' of https://github.com/VicenteqsDam/T2Grupo3
