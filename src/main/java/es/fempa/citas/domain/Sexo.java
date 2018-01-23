@@ -14,8 +14,8 @@ import lombok.Setter;
 @Setter
 public class Sexo {
 	@Id
-	private Integer id_sexo;
-	private String nombre_sexo;
+	private Integer idSexo;
+	private String nombreSexo;
 
 	@OneToMany(mappedBy = "usuario")
 	private List<Usuario> usuario;

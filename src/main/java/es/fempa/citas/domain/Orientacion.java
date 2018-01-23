@@ -14,7 +14,7 @@ import lombok.Setter;
 @Setter
 public class Orientacion {
 	@Id
-	private Integer id_orientacion;
+	private Integer idOrientacion;
 	private String orientacion;
 
 	@OneToMany(mappedBy = "usuario")

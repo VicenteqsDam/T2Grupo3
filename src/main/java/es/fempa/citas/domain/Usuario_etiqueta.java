@@ -10,7 +10,7 @@ import lombok.Setter;
 @Setter
 public class Usuario_etiqueta {
 
-	private int id_etiquetante;
-	private int id_etiquetado;
-	private int id_etiqueta;
+	private int idEtiquetante;
+	private int idEtiquetado;
+	private int idEtiqueta;
 }

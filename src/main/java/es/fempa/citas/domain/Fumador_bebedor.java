@@ -11,6 +11,6 @@ import lombok.Setter;
 @Setter
 public class Fumador_bebedor {
 	@Id
-	private int id_fum_beb;
+	private int idFumBeb;
 	private String modalidad;
 }

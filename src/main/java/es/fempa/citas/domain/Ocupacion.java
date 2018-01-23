@@ -14,7 +14,7 @@ import lombok.Setter;
 @Setter
 public class Ocupacion {
 	@Id
-	private Integer id_ocupacion;
+	private Integer idOcupacion;
 	private String ocupacion;
 
 	@OneToMany(mappedBy = "usuario")

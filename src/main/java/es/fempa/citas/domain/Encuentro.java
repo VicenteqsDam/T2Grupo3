@@ -13,7 +13,7 @@ import lombok.Setter;
 public class Encuentro {
 	private double valoracion;
 	@Id
-	private Integer id_encuentro;
+	private Integer idEncuentro;
 	private String Lugar;
 	private long Fecha;
 	private long hora;
@@ -22,8 +22,8 @@ public class Encuentro {
 	@ManyToOne
 	private Plan plan;
 	private boolean aceptado;
-	private String comentarios_solicitador;
-	private String comentarios_solicitado;
-	private double valoracion_solicitante;
-	private double valoracion_solicitado;
+	private String comentariosSolicitador;
+	private String comentariosSolicitado;
+	private double valoracionSolicitante;
+	private double valoracionSolicitado;
 }

@@ -9,6 +9,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Bloqueos {
-	private int id_usuario1;
-	private int id_usuario2;
+	private int idUsuario1;
+	private int idUsuario2;
 }

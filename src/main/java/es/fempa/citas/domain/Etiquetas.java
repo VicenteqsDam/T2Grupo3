@@ -11,7 +11,7 @@ import lombok.Setter;
 @Setter
 public class Etiquetas {
 	@Id
-	private int id_etiquetas;
+	private int idEtiquetas;
 	private String nombre;
 	private String icono;
 }

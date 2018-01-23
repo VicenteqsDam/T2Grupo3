@@ -14,7 +14,7 @@ import lombok.Setter;
 @Setter
 public class Plan {
 	@Id
-	private Integer id_plan;
+	private Integer idPlan;
 	private String plan;
 
 	@OneToMany(mappedBy = "encuentro")

@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Amistad {
-	private int id_solicitante;
-	private int id_solicitado;
+	private int idSolicitante;
+	private int idSolicitado;
 	private boolean estado;
 }

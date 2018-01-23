@@ -14,8 +14,8 @@ import lombok.Setter;
 @Setter
 public class Pais {
 	@Id
-	private Integer id_pais;
-	private String nombre_pais;
+	private Integer idPais;
+	private String nombrePais;
 
 	@OneToMany(mappedBy = "ciudad")
 	private List<Ciudad> ciudad;

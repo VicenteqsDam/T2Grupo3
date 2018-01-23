@@ -11,10 +11,10 @@ import lombok.Setter;
 @Setter
 public class Mensajes {
 	@Id
-	private int id_mensajes;
-	private int id_emisor;
-	private int id_receptor;
-	private String texto_mensaje;
+	private int idMensajes;
+	private int idEmisor;
+	private int idReceptor;
+	private String textoMensaje;
 	private long fecha;
 	private long hora;
 }

@@ -14,8 +14,8 @@ import lombok.Setter;
 @Setter
 public class Color_ojos {
 	@Id
-	private Integer id_color_ojos;
-	private String color_ojos;
+	private Integer idColorOjos;
+	private String colorOjos;
 
 	@OneToMany(mappedBy = "usuario")
 	private List<Usuario> usuario;

@@ -15,8 +15,8 @@ import lombok.Setter;
 @Setter
 public class Ciudad {
 	@Id
-	private Integer id_ciudad;
-	private String nombre_ciudad;
+	private Integer idCiudad;
+	private String nombreCiudad;
 
 	@ManyToOne
 	private Pais pais;

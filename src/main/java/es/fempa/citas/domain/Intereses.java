@@ -11,6 +11,6 @@ import lombok.Setter;
 @Setter
 public class Intereses {
 	@Id
-	private int id_intereses;
+	private int idIntereses;
 	private String interes;
 }

@@ -11,6 +11,6 @@ import lombok.Setter;
 @Setter
 public class Busca {
 	@Id
-	private int id_busca_fum_beb;
+	private int idBuscaFumBeb;
 	private String busca;
 }

@@ -11,6 +11,6 @@ import lombok.Setter;
 @Setter
 public class Idiomas {
 	@Id
-	private int id_idiomas;
+	private int idIdiomas;
 	private String idioma;
 }

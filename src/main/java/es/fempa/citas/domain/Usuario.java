@@ -14,43 +14,43 @@ import lombok.Setter;
 public class Usuario {
 	@Id
 	@GeneratedValue
-	private int id_usuario;
+	private int idUsuario;
 	private String nombre;
 	private String apellidos;
 	private String email;
-	private long fecha_nacimiento;
+	private long fechaNacimiento;
 	@ManyToOne
 	private Ciudad ciudad;
-	private int codigo_postal;
+	private int codigoPostal;
 	@ManyToOne
 	private Sexo sexo;
 	@ManyToOne
 	private Orientacion orientacion;
 	private String contraseña;
 	@ManyToOne
-	private Color_pelo color_pelo;
+	private Color_pelo colorPelo;
 	@ManyToOne
-	private Color_ojos color_ojos;
+	private Color_ojos colorOjos;
 	@ManyToOne
 	private Estudios estudios;
 	@ManyToOne
 	private Ocupacion ocupacion;
 	@ManyToOne
-	private int id_fumador; // ?
+	private int idFumador; // ?
 	@ManyToOne
-	private int id_bebedor; // ?
+	private int idBebedor; // ?
 	@ManyToOne
-	private int id_busca_fumador; // ?
+	private int idBuscaFumador; // ?
 	@ManyToOne
-	private int id_busca_bebedor; // ?
+	private int idBuscaBebedor; // ?
 	@ManyToOne
 	private Pais pais;
 	@ManyToOne
-	private int id_pais_origen; // ?
+	private int idPaisOrigen; // ?
 	private double altura;
 	private double peso;
 	private String descripcion;
 	private String perfil;
-	private int edad_minima;
-	private int edad_maxima;
+	private int edadMinima;
+	private int edadMaxima;
 }
