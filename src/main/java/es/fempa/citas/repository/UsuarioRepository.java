@@ -9,4 +9,6 @@ import es.fempa.citas.domain.Usuario;
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
 
 	public List<Usuario> findAll();
+	
+	public Usuario findByUsername(String nombre);
 }

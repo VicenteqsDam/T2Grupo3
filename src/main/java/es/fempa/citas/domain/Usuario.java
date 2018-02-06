@@ -1,5 +1,7 @@
 package es.fempa.citas.domain;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -33,7 +35,7 @@ public class Usuario implements Serializable {
 	private Sexo sexo;
 	@ManyToOne
 	private Orientacion orientacion;
-	private String contraseña;
+	private String password;
 	@ManyToOne
 	private Color_pelo colorPelo;
 	@ManyToOne
