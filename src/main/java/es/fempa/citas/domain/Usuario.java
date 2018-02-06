@@ -1,5 +1,8 @@
 package es.fempa.citas.domain;
 
+import java.io.Serializable;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -11,17 +14,23 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Usuario {
+public class Usuario implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5378226911715997365L;
+
 	@Id
 	@GeneratedValue
-	private int idUsuario;
+	private Integer idUsuario;
 	private String nombre;
 	private String apellidos;
-	private String email;
+	@Column(name = "email")
+	private String username;
 	private long fechaNacimiento;
 	@ManyToOne
 	private Ciudad ciudad;
-	private int codigoPostal;
+	private Integer codigoPostal;
 	@ManyToOne
 	private Sexo sexo;
 	@ManyToOne
@@ -35,22 +44,30 @@ public class Usuario {
 	private Estudios estudios;
 	@ManyToOne
 	private Ocupacion ocupacion;
-	@ManyToOne
-	private int idFumador; // ?
-	@ManyToOne
-	private int idBebedor; // ?
-	@ManyToOne
-	private int idBuscaFumador; // ?
-	@ManyToOne
-	private int idBuscaBebedor; // ?
+	private Integer idFumador;
+	private Integer idBebedor;
+	private Integer idBuscaFumador;
+	private Integer idBuscaBebedor;
 	@ManyToOne
 	private Pais pais;
 	@ManyToOne
-	private int idPaisOrigen; // ?
+	private Pais paisOrigen;
 	private double altura;
 	private double peso;
 	private String descripcion;
 	private String perfil;
-	private int edadMinima;
-	private int edadMaxima;
+	private Integer edadMinima;
+	private Integer edadMaxima;
+
+	/*
+	 * @ManyToMany
+	 * 
+	 * @JoinTable(name = "usuario_intereses") // , joinColumns = @JoinColumn(name =
+	 * "usuarioIdUsuario"), inverseJoinColumns // = @JoinColumn(name =
+	 * "interesIdInteres")) private List<Intereses> Intereses;
+	 */
+
+	// @ManyToMany
+	// @JoinTable(name = "usuario_intereses")
+	// private List<Intereses> Usuario_intereses;
 }
