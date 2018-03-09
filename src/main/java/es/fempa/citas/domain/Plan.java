@@ -17,6 +17,6 @@ public class Plan {
 	private Integer idPlan;
 	private String plan;
 
-	@OneToMany(mappedBy = "encuentro")
+	@OneToMany // (mappedBy = "encuentro")
 	private List<Encuentro> encuentro;
 }

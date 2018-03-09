@@ -1,5 +1,7 @@
 package es.fempa.citas.domain;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
@@ -10,20 +12,26 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Encuentro {
-	private double valoracion;
+public class Encuentro implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4730926047940250121L;
 	@Id
 	private Integer idEncuentro;
 	private String Lugar;
-	private long Fecha;
-	private long hora;
-	private int solicitante;
-	private int solicitado;
+	private Long Fecha;
+	private Long hora;
+	@ManyToOne
+	private Usuario solicitante;
+	@ManyToOne
+	private Usuario solicitado;
 	@ManyToOne
 	private Plan plan;
-	private boolean aceptado;
+	private Boolean aceptado;
+	private Double valoracion;
 	private String comentariosSolicitador;
 	private String comentariosSolicitado;
-	private double valoracionSolicitante;
-	private double valoracionSolicitado;
+	private Double valoracionSolicitante;
+	private Double valoracionSolicitado;
 }

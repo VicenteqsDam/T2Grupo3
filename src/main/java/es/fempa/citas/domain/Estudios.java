@@ -17,6 +17,6 @@ public class Estudios {
 	private Integer idEstudios;
 	private String estudio;
 
-	@OneToMany(mappedBy = "usuario")
+	@OneToMany // (mappedBy = "usuario")
 	private List<Usuario> usuario;
 }

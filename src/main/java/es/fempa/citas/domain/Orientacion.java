@@ -17,6 +17,6 @@ public class Orientacion {
 	private Integer idOrientacion;
 	private String orientacion;
 
-	@OneToMany(mappedBy = "usuario")
+	@OneToMany // (mappedBy = "usuario")
 	private List<Usuario> usuario;
 }

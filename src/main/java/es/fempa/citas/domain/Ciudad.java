@@ -1,11 +1,10 @@
 package es.fempa.citas.domain;
 
-import java.util.List;
+import java.io.Serializable;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -13,14 +12,17 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Ciudad {
+public class Ciudad implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5727496835808031234L;
 	@Id
 	private Integer idCiudad;
 	private String nombreCiudad;
 
-	@ManyToOne
+	@OneToOne
 	private Pais pais;
 
-	@OneToMany(mappedBy = "usuario")
-	private List<Usuario> usuario;
 }

@@ -1,7 +1,9 @@
 package es.fempa.citas.domain;
 
+import java.io.Serializable;
+
+import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
-import javax.persistence.Id;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -9,8 +11,12 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Usuario_intereses {
-	@Id
-	private int idUsuario;
-	private int idInteres;
+public class Usuario_intereses implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7487461456346832277L;
+
+	@EmbeddedId
+	private PKUsuarioInteres id;
 }

@@ -1,12 +1,19 @@
 package es.fempa.citas.domain;
 
 import java.io.Serializable;
+import java.util.Calendar;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -27,7 +34,7 @@ public class Usuario implements Serializable {
 	private String apellidos;
 	@Column(name = "email")
 	private String username;
-	private long fechaNacimiento;
+	private Calendar fechaNacimiento;
 	@ManyToOne
 	private Ciudad ciudad;
 	private Integer codigoPostal;
@@ -35,39 +42,36 @@ public class Usuario implements Serializable {
 	private Sexo sexo;
 	@ManyToOne
 	private Orientacion orientacion;
+	@JsonIgnore
 	private String password;
 	@ManyToOne
-	private Color_pelo colorPelo;
+	private ColorPelo colorPelo;
 	@ManyToOne
 	private Color_ojos colorOjos;
 	@ManyToOne
 	private Estudios estudios;
 	@ManyToOne
 	private Ocupacion ocupacion;
-	private Integer idFumador;
-	private Integer idBebedor;
-	private Integer idBuscaFumador;
-	private Integer idBuscaBebedor;
+	@ManyToOne
+	private FumadorBebedor fumador;
+	@ManyToOne
+	private FumadorBebedor bebedor;
+	@ManyToOne
+	private Busca buscaFumador;
+	@ManyToOne
+	private Busca buscaBebedor;
 	@ManyToOne
 	private Pais pais;
 	@ManyToOne
 	private Pais paisOrigen;
-	private double altura;
-	private double peso;
+	private Double altura;
+	private Double peso;
 	private String descripcion;
 	private String perfil;
 	private Integer edadMinima;
 	private Integer edadMaxima;
 
-	/*
-	 * @ManyToMany
-	 * 
-	 * @JoinTable(name = "usuario_intereses") // , joinColumns = @JoinColumn(name =
-	 * "usuarioIdUsuario"), inverseJoinColumns // = @JoinColumn(name =
-	 * "interesIdInteres")) private List<Intereses> Intereses;
-	 */
-
-	// @ManyToMany
-	// @JoinTable(name = "usuario_intereses")
-	// private List<Intereses> Usuario_intereses;
+	@ManyToMany
+	@JoinTable(name = "usuario_interes", joinColumns = @JoinColumn(name = "ID_USUARIO", referencedColumnName = "idUsuario"), inverseJoinColumns = @JoinColumn(name = "INTERES_ID", referencedColumnName = "idInteres"))
+	List<Intereses> intereses;
 }
